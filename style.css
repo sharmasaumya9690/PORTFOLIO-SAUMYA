@@ -1,0 +1,58 @@
+/* style.css - Basic styling for all pages. Contains examples of float and Flexbox usage. */
+
+
+/* Reset & base */
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin: 0; color: #222; line-height: 1.5; }
+.container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+
+
+/* Navigation bar */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1rem; background: #0f4c81; color: #fff; }
+.logo { font-weight: 700; }
+.nav-menu a { color: #fff; text-decoration: none; margin-left: 1rem; }
+.nav-menu a:hover { text-decoration: underline; }
+
+
+/* Hero */
+.hero { padding: 2rem 0; }
+.hero h1 { margin: 0 0 0.5rem 0; }
+
+
+/* Float example: two boxes side-by-side using float as requested */
+.float-left { float: left; width: 48%; margin-right: 2%; }
+.float-right { float: right; width: 48%; }
+.box { background: #f2f6fb; padding: 1rem; border-radius: 8px; }
+
+
+/* About page specific */
+.about-wrapper { display: flex; gap: 1.5rem; align-items: flex-start; }
+.profile-img { width: 200px; height: 200px; object-fit: cover; border-radius: 8px; }
+.about-text { flex: 1; }
+
+
+/* Cards (Flexbox) */
+.cards { display: flex; gap: 1rem; margin-top: 1rem; }
+.card { flex: 1; padding: 1rem; border: 2px solid #ccc; border-radius: 8px; min-height: 120px; }
+.card-1 { background: #fff8e1; }
+.card-2 { background: #e8f5e9; }
+.card-3 { background: #e3f2fd; }
+
+
+/* Contact form */
+.contact-form { max-width: 600px; display: grid; gap: 0.75rem; }
+.contact-form label { font-weight: 600; }
+.contact-form input, .contact-form textarea { padding: 0.6rem; border: 1px solid #bbb; border-radius: 6px; }
+.btn-submit { padding: 0.75rem 1rem; border: none; border-radius: 6px; background: #0f4c81; color: #fff; cursor: pointer; }
+
+
+/* Footer */
+.footer { text-align: center; padding: 1rem; margin-top: 2rem; background: #f4f4f4; }
+
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+.about-wrapper { flex-direction: column; }
+.float-left, .float-right { float: none; width: 100%; margin-right: 0; }
+.cards { flex-direction: column; }
+}
